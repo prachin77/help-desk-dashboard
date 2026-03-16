@@ -9,7 +9,9 @@ import TicketDetailPage from "./pages/TicketDetailPage";
 import CustomersPage from "./pages/CustomersPage";
 import ReportsPage from "./pages/ReportsPage";
 import SettingsPage from "./pages/SettingsPage";
-import AuthPage from "./pages/AuthPage";
+import AdminLoginPage from "./pages/AdminLoginPage";
+import AgentLoginPage from "./pages/AgentLoginPage";
+import CustomerAuthPage from "./pages/CustomerAuthPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
