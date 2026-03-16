@@ -1,5 +1,5 @@
 
-import { Search, Bell, Plus, User, TicketPlus, UserPlus, Tags } from "lucide-react";
+import { Search, Bell, Plus, User, TicketPlus, UserPlus, Tags, ShieldCheck, Headset, UserCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SidebarTrigger } from "@/components/ui/sidebar";
