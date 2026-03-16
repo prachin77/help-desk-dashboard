@@ -9,7 +9,9 @@ import TicketDetailPage from "./pages/TicketDetailPage";
 import CustomersPage from "./pages/CustomersPage";
 import ReportsPage from "./pages/ReportsPage";
 import SettingsPage from "./pages/SettingsPage";
-import AuthPage from "./pages/AuthPage";
+import AdminLoginPage from "./pages/AdminLoginPage";
+import AgentLoginPage from "./pages/AgentLoginPage";
+import CustomerAuthPage from "./pages/CustomerAuthPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,7 +29,9 @@ const App = () => (
           <Route path="/customers" element={<CustomersPage />} />
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/auth/admin" element={<AdminLoginPage />} />
+          <Route path="/auth/agent" element={<AgentLoginPage />} />
+          <Route path="/auth/customer" element={<CustomerAuthPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

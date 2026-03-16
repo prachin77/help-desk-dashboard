@@ -1,5 +1,5 @@
 
-import { Search, Bell, Plus, User, TicketPlus, UserPlus, Tags } from "lucide-react";
+import { Search, Bell, Plus, User, TicketPlus, UserPlus, Tags, ShieldCheck, Headset, UserCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SidebarTrigger } from "@/components/ui/sidebar";
@@ -57,9 +57,27 @@ export function TopNavbar() {
             3
           </span>
         </Button>
-        <Button variant="ghost" size="icon" onClick={() => navigate("/auth")}>
-          <User className="h-5 w-5 text-muted-foreground" />
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <User className="h-5 w-5 text-muted-foreground" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem onClick={() => navigate("/auth/admin")}>
+              <ShieldCheck className="mr-2 h-4 w-4" />
+              Admin
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => navigate("/auth/agent")}>
+              <Headset className="mr-2 h-4 w-4" />
+              Agent
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => navigate("/auth/customer")}>
+              <UserCircle className="mr-2 h-4 w-4" />
+              Customer
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </header>
   );
