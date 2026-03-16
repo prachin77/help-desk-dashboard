@@ -29,7 +29,9 @@ const App = () => (
           <Route path="/customers" element={<CustomersPage />} />
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/auth/admin" element={<AdminLoginPage />} />
+          <Route path="/auth/agent" element={<AgentLoginPage />} />
+          <Route path="/auth/customer" element={<CustomerAuthPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
